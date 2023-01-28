@@ -1,0 +1,21 @@
+<section class="mb-5">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5 mt-5">Каталог</h2>
+        <div class="row row-cols-4">
+
+            <article class="col" style="cursor: pointer;" *ngFor="let Car of Cars">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title fs-4"><span class="fw-bold"> Бренд:</span> {{Car.brandName}}</div>
+                        <div class="card-text"><span class="fw-semibold"> Модель автомобиля:</span> {{Car.modelName}}
+                        </div>
+                        <div class="card-text"><span class="fw-semibold text-warning"> Цена автомобиля:</span>
+                            {{Car.priceInRub |
+                            currency: "RUB":'symbol-narrow'}}</div>
+                    </div>
+                    <a class="btn btn-primary d-block opacity-75" [routerLink]="['/car', Car.id]">Подробнее</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

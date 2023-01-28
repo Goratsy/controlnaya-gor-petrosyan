@@ -1,0 +1,9 @@
+<section>
+    <h2 class="text-center mb-5 mt-5">Добавить Машину</h2>
+    <form [formGroup]="formCar" (ngSubmit)="formSubmit()" class="container">
+        <input class="form-control mb-3" type="text" formControlName="brandName" id="brandName" placeholder="Бренд">
+        <input class="form-control mb-3" type="text" formControlName="modelName" id="modelName" placeholder="Модель">
+        <input class="form-control mb-3" type="number" formControlName="priceInRub" id="priceInRub" placeholder="Цена">
+        <button type="submit" class="btn btn-lg btn-primary" [disabled]="formCar.invalid">Сохранить</button>
+    </form>
+</section>

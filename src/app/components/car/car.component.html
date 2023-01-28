@@ -1,0 +1,10 @@
+<article class="col" style="cursor: pointer;" [routerLink]="['/car', Car.id]">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title fs-4"><span class="fw-bold"> Бренд:</span> {{Car.brandName}}</div>
+            <div class="card-text"><span class="fw-semibold"> Модель автомобиля:</span> {{Car.modelName}}</div>
+            <div class="card-text"><span class="fw-semibold text-warning"> Цена автомобиля:</span> {{Car.priceInRub |
+                currency: "RUB":'symbol-narrow'}}</div>
+        </div>
+    </div>
+</article>
